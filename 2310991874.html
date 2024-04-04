@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Achievements</title>
+    <style>
+        body {
+            font-family: 'Arial, sans-serif';
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #4caf50;
+        }
+
+        .achievement {
+            margin-bottom: 20px;
+        }
+
+        .achievement img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .achievement img:hover {
+            transform: scale(1.2);
+        }
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>University Achievements</h1>
+</header>
+
+<section>
+    <h2>Academic Achievements</h2>
+    <div class="achievement">
+        <h3>Research Excellence Award</h3>
+        <p>Our university received the Research Excellence Award for outstanding contributions to various research fields. This prestigious award recognizes the dedication and innovation of our faculty and students.</p>
+        <img src="https://www.chitkara.edu.in/wp-content/uploads/2023/02/EA.jpg" alt="Research Excellence Award" onclick="showImage(this.src)">
+    </div>
+
+    <div class="achievement">
+        <h3>Top Ranked Programs</h3>
+        <p>Several programs at our university are consistently ranked among the top in the country. Our commitment to academic excellence is reflected in the success of our students and the quality of our educational programs.</p>
+        <img src="https://www.chitkara.edu.in/wp-content/uploads/2021/11/QS-ranking.jpg" alt="Top Ranked Programs" onclick="showImage(this.src)">
+    </div>
+</section>
+
+<section>
+    <h2>Sports Achievements</h2>
+    <div class="achievement">
+        <h3>National Championship</h3>
+        <p>Our university's sports team won the national championship in multiple disciplines. The dedication and hard work of our athletes, coaches, and support staff have brought pride and recognition to our institution.</p>
+        <img src="https://www.chitkara.edu.in/wp-content/uploads/2023/05/Table-Tennis-Championship-banner.jpg" alt="National Championship" onclick="showImage(this.src)">
+    </div>
+
+    <div class="achievement">
+        <h3>Student Athlete Awards</h3>
+        <p>Several student-athletes from our university received awards for their outstanding achievements on and off the field. These individuals exemplify the values of sportsmanship, leadership, and academic excellence.</p>
+        <img src="https://www.chitkarauniversity.edu.in/wp-content/uploads/2022/11/Athletics-banner.jpg" alt="Student Athlete Awards" onclick="showImage(this.src)">
+    </div>
+</section>
+
+<footer>
+    &copy; 2023 University Achievements Page
+</footer>
+
+<script>
+    function showImage(src) {
+        window.open(src, "_blank");
+    }
+</script>
+
+</body>
+</html>
