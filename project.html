@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Application Form</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheet -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <marquee direction="right"><h2>University Application Form</h2></marquee>
+    <form id="universityForm">
+        <strong><label for="name">Name:</label></strong>
+        <input type="text" id="name" name="name" class="form-control" required oninput="this.value = this.value.toUpperCase()">
+
+        <strong><label for="email">Email:</label></strong>
+        <input type="email" id="email" name="email" class="form-control" required oninput="this.value = this.value.toUpperCase()">
+
+        <strong><label for="department">Department:</label></strong>
+        <select id="department" name="department" class="form-control" required>
+            <option value="" disabled selected>Select Department</option>
+            <option value="cs">Computer Science</option>
+            <option value="ee">Electrical Engineering</option>
+            <option value="me">Mechanical Engineering</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <strong><label for="phone">Phone:</label></strong>
+        <input type="tel" id="phone" name="phone" class="form-control" required oninput="this.value = this.value.toUpperCase()">
+
+       <strong> <label for="address">Address:</label></strong>
+        <input type="text" id="address" name="address" class="form-control" required oninput="this.value = this.value.toUpperCase()">
+
+        <!-- Additional labels and input boxes -->
+        <strong><label for="dob">Date of Birth:</label></strong>
+        <input type="date" id="dob" name="dob" class="form-control" required>
+
+        <strong><label for="gender">Gender:</label></strong>
+        <select id="gender" name="gender" class="form-control" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <!-- Change the font to 'Arial, sans-serif' -->
+        <button type="button" onclick="submitForm()" class="btn btn-primary" style="font-family: 'Arial, sans-serif';">Submit</button>
+    </form>
+</div>
+
+<script src="script.js"></script> <!-- Link to external JavaScript file -->
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+body {
+    font-family: 'Arial, sans-serif'; /* Change the font */
+    background-color: black; /* Change the background color to black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #2c3e50; /* Dark Background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Increased width */
+    border: 2px solid #34495e; /* Add border */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+</style><script>
+function submitForm() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var department = document.getElementById('department').value;
+    var phone = document.getElementById('phone').value;
+    var address = document.getElementById('address').value;
+    var dob = document.getElementById('dob').value;
+    var gender = document.getElementById('gender').value;
+    var form = document.getElementById('universityForm');
+
+    // Check if all required fields are filled
+    if (name && email && department && phone && address && dob && gender) {
+        // Form submission logic can be added here
+        alert('Form submitted successfully!');
+        form.reset(); // Reset the form after submission
+    } else {
+        alert('Please fill out all required fields.');
+    }
+}
+</script></body></html>
