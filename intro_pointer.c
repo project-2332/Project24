@@ -2,7 +2,7 @@
 int main()
 {
     int a=5;
-    int * ptr =&a; //variable ptr is type of pointer having address of variable
+    int * ptr =&a; 
     printf("Value of a=%d",a);
     printf("\naddress of variable a without pointer=%d",&a);
     printf("\naddress of variable a without pointer=%x",&a);
@@ -13,4 +13,5 @@ int main()
 
     printf("\naddress of pointer ptr =%d",&ptr);
     printf("\nvalue of a by pointer ptr=%d",*ptr);
+    return 0;
 }
